@@ -1,0 +1,156 @@
+
+.container {
+  max-width: 1920px;
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__wrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__title-text {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  color: #000;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.banner__box {
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 430px;
+    top: 20px;
+    left: -54px;
+    border: 1px solid #b1b1b1;
+    border-radius: 6px;
+    transform: skewY(-7deg);
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 430px;
+    top: 20px;
+    right: -54px;
+    border: 1px solid #b1b1b1;
+    border-radius: 6px;
+    transform: skewY(7deg);
+  }
+}
+
+.banner__box-second {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 430px;
+    top: -20px;
+    left: -90px;
+    border: 1px solid #b1b1b1;
+    border-radius: 6px;
+    transform: skewY(-7deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 430px;
+    top: -20px;
+    right: -90px;
+    border: 1px solid #b1b1b1;
+    border-radius: 6px;
+    transform: skewY(7deg);
+  }
+}
+
+.banner__box-second {
+}
+
+.banner__box-img {
+  display: flex;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.banner__img {
+  position: relative;
+  z-index: 100;
+  flex: 0 0 100%;
+  transition: transform 0.9s ease;
+  img {
+    border-radius: 12px;
+  }
+}
+.banner__button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+
+  background: #e12d39;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+
+  .fa-arrow-left:before {
+    color: #fff;
+  }
+
+  .fa-arrow-right:before {
+    color: #fff;
+  }
+}
+
+.banner__button--prev {
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #ab091e;
+    border-left: 12px solid transparent;
+  }
+}
+
+.banner__button--next {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #ab091e;
+    border-right: 12px solid transparent;
+  }
+}
